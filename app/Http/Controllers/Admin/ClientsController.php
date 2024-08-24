@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Flasher\Toastr\Prime\ToastrInterface;
+// use Flasher\Toastr\Prime\ToastrInterface;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -11,12 +11,12 @@ class ClientsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    protected $toastr;
-    public function __construct(ToastrInterface $toastr)
-    {
-        $this->middleware('auth');
-        $this->toastr = $toastr;
-    }
+    // protected $toastr;
+    // public function __construct(ToastrInterface $toastr)
+    // {
+    //     $this->middleware('auth');
+    //     $this->toastr = $toastr;
+    // }
     public function index()
     {
         return view('backend.Pages.Services.index');

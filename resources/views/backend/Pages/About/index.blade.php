@@ -296,7 +296,7 @@
     let winning_awards = $(this).data('winning_awards');
 
     $("#editModal").find("[name=title]").val(title);
-    $("#editModal").find("[name=sub_title]").val(sub_title);  // এখানে html() এর পরিবর্তে val() ব্যবহার করুন।
+    $("#editModal").find("[name=sub_title]").val(sub_title);  
     $("#editModal").find("[name=satisfied_customer]").val(satisfied_customer);
     $("#editModal").find("[name=completion_project]").val(completion_project);
     $("#editModal").find("[name=experience_team]").val(experience_team);
