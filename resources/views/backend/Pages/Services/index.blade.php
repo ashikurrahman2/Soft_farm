@@ -76,15 +76,15 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title h4" id="myLargeModalLabel">Add New Pickup Point</h5>
+                <h5 class="modal-title h4" id="myLargeModalLabel">Add New Service and Client info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('pickuppoint.store') }}" method="post" id="add-form">
+            <form action="{{ route('client.store') }}" method="post" id="add-form">
               @csrf
               <div class="modal-body">
                   <div class="form-group">
-                      <label for="pickup_point_name" class="col-form-label pt-0">Pickup Point <sup class="text-size-20 top-1">*</sup></label>
-                      <input type="text" class="form-control" id="pickup_point_name" name="pickup_point_name" required placeholder="Pickup Poin Name">
+                      <label for="service_name" class="col-form-label pt-0">service name <sup class="text-size-20 top-1">*</sup></label>
+                      <input type="text" class="form-control" id="service_name" name="service_name" required placeholder="Enter service Name">
                   </div>
                   <div class="form-group">
                       <label for="pickup_point_address" class="col-form-label pt-0">Address <sup class="text-size-20 top-1">*</sup></label>
@@ -134,7 +134,7 @@
         var table = $('.ytable').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{ route('pickuppoint.index') }}",
+            ajax: "{{ route('client.index') }}",
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'pickup_point_name', name: 'pickup_point_name' },
